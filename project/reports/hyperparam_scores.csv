@@ -1,0 +1,4 @@
+,model,time_limit,auto_stack,num_bag_folds,num_bag_sets,num_stack_levels,score
+0,hpo1,600,True,,,,0.45651
+1,hpo2,720,False,5.0,,2.0,0.46384
+2,hpo3,960,False,9.0,,3.0,0.47102
