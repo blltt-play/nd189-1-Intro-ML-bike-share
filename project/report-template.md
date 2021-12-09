@@ -1,19 +1,23 @@
 # Report: Predict Bike Sharing Demand with AutoGluon Solution
 #### NAME HERE
+Bill L
 
 ## Initial Training
 ### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-TODO: Add your explanation
+Values less than zero needed to be set to zero.
 
 ### What was the top ranked model that performed?
 TODO: Add your explanation
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
-TODO: Add your explanation
+Some columns were missing from the test data, so needed to be ignored in the train data.
+Split up the date field into year, month, day and hour.
+Changed the type of the weather and season fields to category.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-TODO: Add your explanation
+It improved (reduced) the score by a factor of almost 3.
+I think this is because the models could train better.
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
