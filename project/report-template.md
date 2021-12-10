@@ -8,6 +8,7 @@ Values less than zero needed to be set to zero.
 
 ### What was the top ranked model that performed?
 Here are the results for the initial training, showing model_best = WeightedEnsemble_L3:
+```
 'model_performance': {'KNeighborsUnif_BAG_L1': 0.21572321954622853,
   'KNeighborsDist_BAG_L1': 0.12381434021469773,
   'LightGBMXT_BAG_L1': 0.4522208535196661,
@@ -53,7 +54,7 @@ Here are the results for the initial training, showing model_best = WeightedEnse
  18   NeuralNetMXNet_BAG_L1   0.394584       1.567910   401.789879
  19   KNeighborsUnif_BAG_L1   0.215723       0.103322     0.031379
  20   KNeighborsDist_BAG_L1   0.123814       0.104763     0.025091
-
+```
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
 Some columns were missing from the test data, so needed to be ignored in the train data.
@@ -89,6 +90,7 @@ I would remove the time_limit parameter, to allow all model training to run to f
 ## Summary
 This was a good project for getting familiar with kaggle and AutoGluon.
 Some time went into developing functions such as these:
+```
 def top_model_score(predictor):
     summary = predictor.fit_summary()
     model_performance = summary['model_performance']
@@ -108,5 +110,5 @@ def get_kaggle_score( competition, filename, use_private=True ):
                 return float(splits[-1])
             else: # else gets public score
                 return float(splits[-2])
-
+```
 and I used AWS Secrets Manager for kaggle credentials.
